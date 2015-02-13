@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.mms.vo.User" table="ta_user" schema="test">
+		<id name="id" column="id" type="int">
+			<generator class="native" />
+		</id>
+		<property name="userId" column="userid" type="string" />
+		<property name="passWd" column="passwd" type="string" />
+		<property name="accessAcct" column="access_acct" type="string"/>
+		<property name="isLogged" column="islogged" type="boolean"/>
+		<property name="updateDatetime" column="update_datetime" type="timestamp"/>
+		<property name="createDatetime" column="create_datetime" type="timestamp"/>
+	</class>
+	
+	<class name="com.mms.vo.Login" table="ta_login" schema="test">
+		<id name="id" column="id" type="int">
+			<generator class="native" />
+		</id>
+		<property name="userId" column="userid" type="string" />
+		<property name="startLog" column="start_log" type="timestamp"/>
+		<property name="endLog" column="end_log" type="timestamp"/>
+	</class>
+</hibernate-mapping>

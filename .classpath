@@ -41,7 +41,6 @@
 	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
 	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/hibernate-testing.jar"/>
 	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/infinispan-core-4.2.1.CR1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/javassist-3.12.0.GA.jar"/>
 	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/jbosscache-core-3.2.1.GA.jar"/>
 	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/jta-1.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/oscache-2.1.jar"/>
@@ -58,6 +57,6 @@
 	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.web.servlet-3.1.0.RELEASE.jar"/>
 	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.web.struts-3.1.0.RELEASE.jar"/>
 	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.web-3.1.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="D:/WORKSPACE/LIB/javassist-3.11.0.GA.jar"/>
+	<classpathentry kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/javassist-3.12.0.GA.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

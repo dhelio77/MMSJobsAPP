@@ -1,0 +1,10 @@
+# lib directories
+
+src.dir=appClientModule
+build.dir=build
+
+#lib.dir=D:/WORKSPACE/LIB
+#dbcp.lib=D://WORKSPACE//LIB//dbcp
+#hibernate.lib=D:/WORKSPACE/LIB/hibernate/3.6.7
+#junit.lib=D:/WORKSPACE/LIB/junit
+#spring.lib=D:/WORKSPACE/LIB/spring/spring-3.1.0

@@ -13,50 +13,11 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.aop-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.asm-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.aspects-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.beans-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.context.support-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.context-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.core-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.expression-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.instrument.tomcat-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.instrument-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.jdbc-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.jms-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.orm-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.oxm-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.test-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.transaction-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/dbcp/commons-dbcp-1.2.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/dbcp/commons-pool-1.3.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/antlr-2.7.6.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/c3p0-0.9.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/cglib-2.2.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/commons-collections-3.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/dom4j-1.6.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/hibernate3.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/hibernate-testing.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/infinispan-core-4.2.1.CR1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/jbosscache-core-3.2.1.GA.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/jta-1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/oscache-2.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/proxool-0.8.3.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/slf4j-api-1.6.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/swarmcache-1.0RC2.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/junit/junit-4.10.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/aopalliance-1.0.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/hibernate-validator-4.3.0.Final.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/mysql-connector-java-5.1.20-bin.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/apache-logging-log4j.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/commons-logging-1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.web.portlet-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.web.servlet-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.web.struts-3.1.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/WORKSPACE/LIB/spring/spring-3.1.0/org.springframework.web-3.1.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="D:/WORKSPACE/LIB/hibernate/3.6.7/javassist-3.12.0.GA.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/Hibernate3.6.7"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/Spring3.1.0"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/Dbcp1.2.1"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/JUnit4.10"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/Logging"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/RefLIB"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

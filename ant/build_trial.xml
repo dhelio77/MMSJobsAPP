@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MMSJobsAPP Project" basedir="." default="info">
+   
+   	<!-- property name="sitename" value="www.tutorialspoint.com"/-->
+   	<property file="build_trial.properties"/>
+   
+	<target name="info">
+      	<echo>Apache Ant version is ${ant.version} - Author: ${author}</echo>
+      	<echo>Full location of ant file: ${ant.file}</echo>
+      	<echo>Basedir: ${basedir}</echo>
+      	<echo>Ant java version: ${ant.java.version}</echo>
+      	<echo>Ant project name: ${ant.project.name}</echo>
+      	<echo>The default target of the current project: ${ant.project.default-target}</echo>
+      	<echo>List of the targets that were invoked in the current project: ${ant.project.invoked-targets}</echo>
+      	<echo>The full location of the Ant jar file: ${ant.core.lib}</echo>
+      	<echo>The home directory of Ant installation: ${ant.home}</echo>
+      	<echo>The home directory for Ant library files: ${ant.library.dir}</echo>
+   	</target>
+   
+   	<patternset id="java.files.without.stubs">
+   		<include name="com/**/*.java"/>
+   		<exclude name="com/**/*Stub*"/>
+	</patternset>
+	
+	<fileset dir="${mmsapp.src}" casesensitive="yes">
+   		<patternset refid="java.files.without.stubs"/>
+	</fileset>
+	
+	<filelist id="config.files" dir="${mmsapp.resource}">
+   		<file name="app_bean.xml"/>
+   		<file name="app_test"/>
+   		<file name="ds_bean.xml"/>
+   		<file name="jdbc.properties"/>
+   		<file name="user.hbm.xml"/>
+	</filelist>
+   
+	<copy todir="${output.dir}">
+   		<fileset dir="${releasenotes.dir}" includes="**/*.class"/>
+   		<filterset>
+      		<filter token="VERSION" value="${current.version}"/>
+   		</filterset>
+	</copy>   
+	
+</project>

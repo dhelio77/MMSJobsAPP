@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="MMSJobsAPP" basedir="." default="jar">
+	
+	<property name="src.dir" value="appClientModule" />
+	<property name="build.dir" value="build" />
+	<property name="jar.dir" value="jar" />
+	<property name="class.dir" value="${build.dir}/classes" />
+	<property name="lib.dir" value="${build.dir}/lib" />
+	<property name="name" value="MMSJobsAPP" />
+	
+	<path id="master-classpath">
+      	<fileset dir="${lib.dir}">
+      		<include name="*.jar"/>
+      	</fileset>
+   	</path>
+   	
+   	<target name="init">
+		<mkdir dir="jar" />
+		<mkdir dir="dist" />
+	</target>
+   
+   	<target name="compile" description="Compile source tree java files" depends="init">
+      	<javac destdir="${class.dir}" source="1.8" target="1.8" debug="true" deprecation="false" optimize="false" failonerror="true">
+         	<src path="${src.dir}"/>
+         	<classpath refid="master-classpath"/>
+      	</javac>
+   	</target>
+   	
+   	<target name="jar" depends="compile">
+	   	<jar destfile="${jar.dir}/MMSJobsAPP.jar"
+	      	 basedir="${build.dir}"
+	      	 includes="classes/**, lib/*.*"
+	      	 excludes="**/Test.class">
+	   	</jar>
+	</target>
+   
+   	<target name="javadoc" depends="jar">
+	   	<javadoc packagenames="com.mms.*" sourcepath="${src.dir}" 
+	      destdir = "doc" version = "true" windowtitle = "MMSJobsAPP Project">
+	      
+	      	<doctitle><![CDATA[= MMSJobsAPP =]]></doctitle>
+	      
+	      	<bottom>
+	         	<![CDATA[Copyright © 2015. All Rights Reserved.]]>
+	      	</bottom>
+	      
+	      	<group title = "service packages" packages = "com.mms.service.*"/>
+	      	<group title = "data packages" packages = "com.mms.dao.*"/>
+	      	<group title = "util packages" packages = "com.mms.vo.*:com.mms.loader.*"/>
+	      	<group title = "test packages" packages = "com.mms.test.*"/>
+	   	</javadoc>
+   
+   		<echo message = "java doc has been generated!" />
+	</target>
+
+</project>

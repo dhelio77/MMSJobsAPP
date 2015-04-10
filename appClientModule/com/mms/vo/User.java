@@ -12,8 +12,8 @@ import java.sql.Timestamp;
 public class User {
 	
 	private int id;
-	private String userId;
-	private String passWd;
+	private String username;
+	private String password;
 	private String accessAcct;
 	private Boolean isLogged;
 	private Timestamp updateDatetime;
@@ -59,31 +59,31 @@ public class User {
 	}
 
 	/**
-	 * @return the userId
+	 * @return the username
 	 */
-	public String getUserId() {
-		return userId;
+	public String getUsername() {
+		return username;
 	}
 
 	/**
-	 * @param userId the userId to set
+	 * @param username the username to set
 	 */
-	public void setUserId(String userId) {
-		this.userId = userId;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	/**
-	 * @return the passWd
+	 * @return the password
 	 */
-	public String getPassWd() {
-		return passWd;
+	public String getPassword() {
+		return password;
 	}
 
 	/**
-	 * @param passwd the passWd to set
+	 * @param password the password to set
 	 */
-	public void setPassWd(String passWd) {
-		this.passWd = passWd;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	/**

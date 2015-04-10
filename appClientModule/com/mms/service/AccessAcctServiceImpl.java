@@ -6,6 +6,8 @@ package com.mms.service;
 import java.util.Collection;
 
 import com.mms.dao.IAccessAcct;
+import com.mms.exception.AuthenticationException;
+import com.mms.vo.Invoice;
 import com.mms.vo.Login;
 import com.mms.vo.User;
 import com.mms.service.IAccessAcctService;
@@ -62,11 +64,23 @@ public class AccessAcctServiceImpl implements IAccessAcctService {
 	public Collection<User> getUsers() {
 		return getAccessAcct().getUsers();
 	}
-
+	
 	@Override
 	public User getUserWithID(User user) {
 		if (user != null) {
-			getAccessAcct().getUserWithID(user);
+			return getAccessAcct().getUserWithID(user);
+		}
+		return null;
+	}
+	
+	@Override
+	public User getUser(String username, String password)
+	throws AuthenticationException {
+		if (username != null && password != null) {
+			User user = getAccessAcct().getUser(username, password);
+			System.out.println("User from Service: "+user);
+			if (user==null) throw new AuthenticationException("Service: User object is null!");
+			else return user;
 		}
 		return null;
 	}
@@ -107,6 +121,17 @@ public class AccessAcctServiceImpl implements IAccessAcctService {
 	@Override
 	public Collection<Login> getLogins() {
 		return getAccessAcct().getLogins();
+	}
+
+	@Override
+	public String getLatestInvoice() {
+		return getAccessAcct().getLatestInvoice();
+	}
+
+	@Override
+	public void createInvoice(Invoice invoice) {
+		getAccessAcct().createInvoice(invoice);
+		
 	}
 
 }

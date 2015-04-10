@@ -12,7 +12,7 @@ import java.sql.Timestamp;
 public class Login {
 	
 	private int id;
-	private String userId;
+	private String username;
 	private Timestamp startLog;
 	private Timestamp endLog;
 
@@ -38,17 +38,17 @@ public class Login {
 	}
 
 	/**
-	 * @return the userId
+	 * @return the username
 	 */
-	public String getUserId() {
-		return userId;
+	public String getUsername() {
+		return username;
 	}
 
 	/**
-	 * @param userId the userId to set
+	 * @param username the username to set
 	 */
-	public void setUserId(String userId) {
-		this.userId = userId;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	/**

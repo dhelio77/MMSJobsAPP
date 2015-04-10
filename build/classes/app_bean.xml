@@ -74,7 +74,7 @@
 	<!-- This is where the CRUD is located -->
 	<bean id="myAccessAcctDao"  class="com.mms.dao.AccessAcctDao"
 		p:sessionFactory-ref="mySessionFactory"/>
-
+		
 	<!-- This is the service object that we want to make transactional -->
 	<!-- accessAcct will be the instance variable in the AccessAcctServiceImpl class -->
 	<bean id="accessAcctSrvc"  class="com.mms.service.AccessAcctServiceImpl"

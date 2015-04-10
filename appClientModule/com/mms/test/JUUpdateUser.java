@@ -41,7 +41,7 @@ public class JUUpdateUser
 	
 	private User user = null;
 	
-	private static String USERID = "rhodel";
+	private static String USERNAME = "rhodel";
 	private static Boolean ISLOGGED = new Boolean(true);
 	private static Timestamp UPDATE_DATETIME = new Timestamp(Calendar.getInstance().getTimeInMillis());
 	
@@ -73,7 +73,7 @@ public class JUUpdateUser
 	
 	private User getUser() {
 		user = new User();
-		user.setUserId(USERID);
+		user.setUsername(USERNAME);
 		return getAccessAcctService().getUser(user);
 	}
 	

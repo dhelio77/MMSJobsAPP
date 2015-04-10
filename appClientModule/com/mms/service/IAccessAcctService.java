@@ -5,6 +5,8 @@ package com.mms.service;
 
 import java.util.Collection;
 
+import com.mms.exception.AuthenticationException;
+import com.mms.vo.Invoice;
 import com.mms.vo.Login;
 import com.mms.vo.User;
 
@@ -36,8 +38,17 @@ public interface IAccessAcctService {
 	
 	User getUser(User user);
 	
+	User getUser(String userName, String passWord) throws AuthenticationException;
+	
 	User getUserWithID(User user);
 	
 	Collection<User> getUsers();
+	
+	/*
+	 * Invoice
+	 */
+	String getLatestInvoice();
+	
+	void createInvoice(Invoice invoice);
 	
 }

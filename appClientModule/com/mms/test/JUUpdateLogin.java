@@ -80,7 +80,7 @@ public class JUUpdateLogin
 	
 	private Login setLogin(Login login) {
 		login.setId(login.getId());
-		login.setUserId(login.getUserId());
+		login.setUsername(login.getUsername());
 		login.setEndLog(END_LOG);
 		return login;
 	}

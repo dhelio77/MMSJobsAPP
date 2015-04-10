@@ -38,7 +38,7 @@ public class JUCreateLogin
 	
 	private Login login = null;
 	
-	private static String USERID = "rhodel";
+	private static String USERNAME = "rhodel";
 	private static Timestamp START_LOG = new Timestamp(Calendar.getInstance().getTimeInMillis());
 	
 	/**
@@ -73,7 +73,7 @@ public class JUCreateLogin
 	
 	private Login setLogin() {
 		login = new Login();
-		login.setUserId(USERID);
+		login.setUsername(USERNAME);
 		login.setStartLog(START_LOG);
 		return login;
 	}

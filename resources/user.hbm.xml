@@ -8,8 +8,8 @@
 		<id name="id" column="id" type="int">
 			<generator class="native" />
 		</id>
-		<property name="userId" column="userid" type="string" />
-		<property name="passWd" column="passwd" type="string" />
+		<property name="username" column="username" type="string" />
+		<property name="password" column="password" type="string" />
 		<property name="accessAcct" column="access_acct" type="string"/>
 		<property name="isLogged" column="islogged" type="boolean"/>
 		<property name="updateDatetime" column="update_datetime" type="timestamp"/>
@@ -20,8 +20,38 @@
 		<id name="id" column="id" type="int">
 			<generator class="native" />
 		</id>
-		<property name="userId" column="userid" type="string" />
+		<property name="username" column="username" type="string" />
 		<property name="startLog" column="start_log" type="timestamp"/>
 		<property name="endLog" column="end_log" type="timestamp"/>
+	</class>
+	
+	<class name="com.mms.vo.Invoice" table="ta_invoice" schema="test">
+		<id name="id" column="id" type="int">
+			<generator class="native" />
+		</id>
+		<property name="invoiceDate" column="invoice_date" type="timestamp" />
+		<property name="invoiceNo" column="invoice_no" type="string"/>
+		<property name="clientName" column="client_name" type="string"/>
+		<property name="clientAddress" column="client_address" type="string"/>
+		<property name="clientOrderNo" column="client_order_no" type="string"/>
+		<property name="clientContactName" column="client_contact_name" type="string"/>
+		<property name="clientContactPosition" column="client_contact_position" type="string"/>
+		<property name="jobDetails" column="job_details" type="string"/>
+		<property name="jobTechnician" column="job_technician" type="string"/>
+		<property name="jobDesc" column="job_desc" type="string"/>
+		<property name="jobHours" column="job_hours" type="double"/>
+		<property name="jobRate" column="job_rate" type="double"/>
+		<property name="jobTotal" column="job_total" type="big_decimal"/>
+		<property name="jobImage" column="job_image" type="blob"/>
+		<property name="jobCallOutCharge" column="job_call_out_charge" type="big_decimal"/>
+		<property name="labourJobSubTotal" column="labour_job_subtotal" type="big_decimal"/>
+		<property name="partsMatDetails" column="parts_material_details" type="string"/>
+		<property name="partsQty" column="parts_qty" type="int"/>
+		<property name="partsRate" column="parts_rate" type="double"/>
+		<property name="partsTotal" column="parts_total" type="big_decimal"/>
+		<property name="labourPartsSubTotal" column="labour_parts_subtotal" type="big_decimal"/>
+		<property name="preGstTotal" column="pre_gst_total" type="big_decimal"/>
+		<property name="gst" column="gst" type="big_decimal"/>
+		<property name="labourTotalCost" column="labour_total_cost" type="big_decimal"/>
 	</class>
 </hibernate-mapping>

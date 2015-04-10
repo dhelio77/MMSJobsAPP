@@ -8,7 +8,9 @@ import java.util.Collection;
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 
-import com.mms.dao.IAccessAcct;
+import com.mms.exception.AuthenticationException;
+import com.mms.util.InvoiceGenerator;
+import com.mms.vo.Invoice;
 import com.mms.vo.Login;
 import com.mms.vo.User;
 
@@ -41,9 +43,7 @@ public class AccessAcctDao implements IAccessAcct {
 		this.sessionFactory = sessionFactory;
 	}
 
-	/**
-	 * User
-	 */
+//	User
 	
 	@Override
 	public void insertOrUpdateUser(User user) throws UnsupportedOperationException {
@@ -72,19 +72,36 @@ public class AccessAcctDao implements IAccessAcct {
 	}
 
 	/**
-	 * This retrieve the User object using the userid.
+	 * This retrieve the User object using the username.
 	 * @param user
 	 * @return User object
 	 * @throws UnsupportedOperationException
-	 * 
-	 * /** TODO better put the mapping to constant
-	 *     Eg. com.mms.vo.User
 	 */
 	public User getUser(User user) throws UnsupportedOperationException {
 		return (User) getSessionFactory().getCurrentSession()
-				.createQuery("from com.mms.vo.User where userid = :userId") 
-				.setParameter("userId", (String) user.getUserId())
+				.createQuery("from com.mms.vo.User where username = :username") 
+				.setParameter("username", (String) user.getUsername())
 				.uniqueResult();
+	}
+	
+	/**
+	 * This retrieves the User object using username and password
+	 * @param String userName, String passWd
+	 * @return User object
+	 * @throws UnsupportedOperationException
+	 */
+	public User getUser(String userName, String passWord) throws AuthenticationException {
+		String query = "from com.mms.vo.User u where u.username = :userName and u.password = :passWord";
+		System.out.println("Query: "+query);
+		System.out.println("Param: ["+userName+","+passWord+"]");
+		User user = (User) getSessionFactory().getCurrentSession()
+				.createQuery(query) 
+				.setParameter("userName", userName)
+				.setParameter("passWord", passWord)
+				.uniqueResult();
+		System.out.println("User from DAO: "+user);
+		if (user==null) throw new AuthenticationException("DAO: User object is null!");
+		return user;
 	}
 	
 	/**
@@ -107,9 +124,7 @@ public class AccessAcctDao implements IAccessAcct {
 				.list();
 	}
 	
-	/**
-	 * Login
-	 */
+//	Login
 	
 	@Override
 	public void insertLogin(Login login) {
@@ -138,15 +153,15 @@ public class AccessAcctDao implements IAccessAcct {
 	}
 	
 	/**
-	 * This retrieve the Login object using the userid.
+	 * This retrieve the Login object using the username.
 	 * @param login
 	 * @return Login object
 	 * @throws UnsupportedOperationException
 	 */
 	public Login getLogin(Login login) throws UnsupportedOperationException {
 		return (Login) getSessionFactory().getCurrentSession()
-				.createQuery("from com.mms.vo.Login where userid = :userId")
-				.setParameter("userId", (String) login.getUserId())
+				.createQuery("from com.mms.vo.Login where username = :username")
+				.setParameter("username", (String) login.getUsername())
 				.uniqueResult();
 	}
 	
@@ -170,5 +185,48 @@ public class AccessAcctDao implements IAccessAcct {
 				.createQuery("from com.mms.vo.Login")
 				.list();
 	}
+	
+//	Invoice
+	
+	/**
+	 * 
+	 * @param sessionFactory
+	 * @return
+	 */
+	@Override
+	public String getLatestInvoice() throws UnsupportedOperationException {
+		String newInvoice = null;
+		String query = "from com.mms.vo.Invoice i where i.id = (select max(id) from i)";
+//		String query = "from com.mms.vo.Invoice";
+		System.out.println("Query: "+query);
+		Invoice invoice = (Invoice) getSessionFactory().getCurrentSession()
+				.createQuery(query)
+				.uniqueResult();
+		
+		System.out.println("Extracted Invoice: "+invoice);
+		if (invoice!=null) {
+			System.out.println("Generating new invoice from latest invoice number...");
+			newInvoice = InvoiceGenerator.getInstance().generateInvoice(invoice);
+		} else {
+			System.out.println("Generating the first invoice number...");
+			newInvoice = InvoiceGenerator.getInstance().generateInvoice();
+		}
+		
+		return newInvoice;
+	}
 
+	/**
+	 * 
+	 */
+	@Override
+	public void createInvoice(Invoice invoice) {
+		try {
+			getSessionFactory().getCurrentSession().saveOrUpdate(invoice);
+		} catch (HibernateException e) {
+			System.out.println("HibernateException: createInvoice()!");
+			e.printStackTrace();
+		}
+	}
+	
+	
 }
